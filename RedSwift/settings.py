@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2pj&q1(7*&f&z#o@ejr@bcdj5*8=+%u5h%bk$49h-44irc!uhv'
+SECRET_KEY = 'django-insecure-c($iz#l7f!6c$erq+36%yt_!n#z-s9f=jw2xugf=a9giv=06@!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -74,7 +74,6 @@ WSGI_APPLICATION = 'RedSwift.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -85,6 +84,7 @@ DATABASES = {
         'PORT': '',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
