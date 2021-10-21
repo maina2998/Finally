@@ -7,4 +7,4 @@ def login (request):
         return render(request, "base.html", data)
     else:
         return redirect("auth_login")
-    
+       

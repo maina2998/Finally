@@ -1,0 +1,37 @@
+body{
+  margin: 0;
+  padding: 0;
+  color:gray;
+  margin-bottom: 40%;
+  height: 1200;
+        
+  }
+  section{
+    position:absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    height: 400px;
+    width: 800px; 
+    background-color:whitesmoke;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    /* margin-top: 45%; */
+      }
+      
+    .content{
+      width: calc(50%-50px);
+      height: 100%;
+      background-color:  whitesmoke;
+      padding: 2% 5%;
+      line-height: 1.5em;
+      font-size: 18px;
+      text-align: justify;
+      background-color:#1139AA;
+      
+      }
+
+      form{
+        /* background-color: blue; */
+        text-align: center;
+      }
