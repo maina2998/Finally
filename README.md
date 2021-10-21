@@ -24,19 +24,7 @@ Postgres is a free and open-source database management system that is extensible
 Postgresql source code is freely available under an open-source license
 Postgres has a filter clause that can be used to aggregate data based on certain criteria.
 
-
-#DATABASE
-Name- redswift db
-USER-Redswift
-PASSWORD-Imanage
-
-User-oito
-Password-sharon
-
-
-
-
-#Twilio
+# Twilio
 Twilio allows software developers to programmatically make and receive phone calls, send and receive text messages and perform other communication functions using its web service APIs.
 Twilio offers a 30-day free trial.
 Twilio APIs are available online in their documentation.
