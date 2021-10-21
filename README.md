@@ -1,5 +1,5 @@
 # RedSwift
- ALLOWED_HOSTS = ['https://redswift5.herokuapp.com']
+ Live link= ['https://imanage5.herokuapp.com/']
  
  Project manager: Wato Tacho
 Members:	Sharon Oito
