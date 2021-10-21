@@ -1,7 +1,7 @@
 # RedSwift
  Live link= 'https://imanage5.herokuapp.com/'
  
-# Summary of the research
+# Summary of the project
 Primary and secondary research was conducted on 3 blood donor organizations in Kenya to find out how they manage their donors’ information. In the quest to improve blood donor management, we decided to come up with a dashboard that makes the process of identifying eligible donors easier.
 Languages
 Python
