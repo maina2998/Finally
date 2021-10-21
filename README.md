@@ -1,19 +1,19 @@
 # RedSwift
  Live link= 'https://imanage5.herokuapp.com/'
  
-#Summary of the research
+# Summary of the research
 Primary and secondary research was conducted on 3 blood donor organizations in Kenya to find out how they manage their donors’ information. In the quest to improve blood donor management, we decided to come up with a dashboard that makes the process of identifying eligible donors easier.
 Languages
 Python
 HTML/CSS
 Bootstrap
 
-#Framework
+# Framework
 Django
 It can work with any client-side framework and can deliver content in almost any format (HTML, JSON, XML, etc)
 Django provides a secure way to manage user accounts and passwords, donor information is really sensitive and needs to be secure from unauthorized users.
 
-#Requirements
+# Requirements
 Heroku 
 Heroku is a platform as a service (Paas) that enables developers to build, run and operate applications entirely in the cloud.
 Heroku offers a free plan to experiment and find out what works best for you.
