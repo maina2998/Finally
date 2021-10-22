@@ -27,14 +27,14 @@ SECRET_KEY = 'django-insecure-c($iz#l7f!6c$erq+36%yt_!n#z-s9f=jw2xugf=a9giv=06@!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://redswift5.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'registration',
-    'authentication',
+    # 'registration',
+    # 'authentication',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
