@@ -1,10 +1,16 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
+from django.contrib.auth import authenticate
+from django.contrib.auth import login
+from django.views.decorators.csrf import csrf_exempt
+
+
+
 
 # Create your views here.
 
-
+@csrf_exempt
 def login_user(request):  
     if request.method == "POST":        
         username = request.POST.get('username')       
@@ -13,10 +19,8 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None: 
             login(request, user) 
-            return render(request, 'homepage.html', {})
-        else:
-            messages.info(request, 'Username OR Password is incorrect')
-            
+            return redirect('home:homepage.html')
+         
     content = {}    
     return render(request,'base.html',content )
 

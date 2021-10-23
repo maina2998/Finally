@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('',include('core.urls')),
     path('admin/', admin.site.urls),
-    # path('accounts/',include("registration.backends.default.urls")),
-    # path('authentication/',include("authentication.urls")),
+    path('home/',include('home.urls')),
+  
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
