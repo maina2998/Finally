@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="appeal">
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Phone number</th>
+          <th>County</th>
+          <th>Town</th>
+          <th>Age</th>
+          <th>Blood group</th>
+          <th>Date last donated</th>
+          
+        </tr>
+
+        <tr>
+          {% for appeals in appeal %}
+
+          <td>{{appeal.first_name}}</td>
+          <td>{{appeal.last_name}}</td>
+          <td>{{appeal.phone_number}}</td>
+          <td>{{appeal.county}}</td>
+          <td>{{appeal.town}}</td>
+          <td>{{appeal.age}}</td>
+          <td>{{appeal.blood_group}}</td>
+          <td>{{appeal.date_last_donated}}</td>
+          
+          
+          
+        </tr>
+          {% endfor %}
+</body>
+</html>

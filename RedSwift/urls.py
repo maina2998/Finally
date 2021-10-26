@@ -24,6 +24,10 @@ urlpatterns = [
     path('',include('core.urls')),
     path('admin/', admin.site.urls),
     path('home/',include('home.urls')),
+    path('appeals/',include('appeals.urls')),
+  
+
+
   
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
