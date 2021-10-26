@@ -11,26 +11,30 @@
         <tr>
           <th>First name</th>
           <th>Last name</th>
-          <th>Phone number</th>
+          <!-- <th>Phone number</th> -->
           <th>County</th>
           <th>Town</th>
           <th>Age</th>
           <th>Blood group</th>
           <th>Date last donated</th>
+          <th>Edit appeal</th>
+          
           
         </tr>
 
         <tr>
-          {% for appeals in appeal %}
+          {% for appeal in appeals %}
 
           <td>{{appeal.first_name}}</td>
           <td>{{appeal.last_name}}</td>
-          <td>{{appeal.phone_number}}</td>
+          <!-- <td>{{appeal.phone_number}}</td> -->
           <td>{{appeal.county}}</td>
           <td>{{appeal.town}}</td>
           <td>{{appeal.age}}</td>
           <td>{{appeal.blood_group}}</td>
           <td>{{appeal.date_last_donated}}</td>
+          <td> <a href="{% url 'edit_appeals' id=appeal.id %}">Edit appeal</a></td>
+       
           
           
           

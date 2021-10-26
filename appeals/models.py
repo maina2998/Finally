@@ -6,12 +6,12 @@ from django.db.models.fields import CharField, PositiveSmallIntegerField
 
 class Appeals(models.Model):
     first_name = models.CharField(max_length=100)
-    second_name=models.CharField(max_length=100)
+    last_name=models.CharField(max_length=100)
     blood_group=models.CharField(max_length=3)
     # Phone_number=models.PhoneNumberField(unique=True)
     county=models.CharField(max_length=100)
     town=models.CharField(max_length=100)
-    Date_last_donated=models.DateField()
+    date_last_donated=models.DateField()
     age=PositiveSmallIntegerField()
     
 

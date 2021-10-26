@@ -7,9 +7,10 @@ def appeals_list(request):
     appeal=Appeals.objects.all()
     return render(request,"appeals_list.html",{"appeals":appeal})
 
+
 def add_appeals_form(request):
     if request.method=="POST":
-        form=add_appeals_form(request.POST)
+        form=Addappealforms(request.POST)
         if form.is_valid():
             form.save()
             return redirect("add_appeals_form")
@@ -20,4 +21,15 @@ def add_appeals_form(request):
 
     return render(request,"add_appeals_form.html",{"form":form})
 
+def edit_appeals(request,id):
+    appeal=Appeals.objects.get(id=id)
+    if request.method=="POST":
+        form=Addappealforms(request.POST,instance=appeal)
+        if form.is_valid():
+            form.save()
+        return redirect("appeals_list",id=appeal.id)
+
+    else:
+        form=Addappealforms(instance=appeal)
+        return render (request,"edit_appeals.html",{"form":form})
 
