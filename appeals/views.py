@@ -39,6 +39,9 @@ def edit_appeals(request,id):
 
 def delete_appeals(request,id):
     appeal=Appeals.objects.get(id=id)
-    appeal.delete()
-    return redirect(appeals_list)  
+    if request.method == 'POST':
+        appeal.delete()
+        return redirect(appeals_list)
+    return render (request,'delete_appeals.html')
+
 

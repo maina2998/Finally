@@ -8,5 +8,6 @@ path("edit/<int:id>/",edit_appeals,name="edit_appeals"),
 path("profile/<int:id>/",appeals_profile,name="appeals_profile"),
 path('delete<int:id>/',delete_appeals,name="delete_appeals"),  
 
+
                        
 ]
