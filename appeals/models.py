@@ -11,7 +11,7 @@ class Appeals(models.Model):
     # Phone_number=models.PhoneNumberField(unique=True)
     county=models.CharField(max_length=100)
     town=models.CharField(max_length=100)
-    date_last_donated=models.DateField()
+    date_of_appeal=models.DateField()
     age=PositiveSmallIntegerField()
     
 

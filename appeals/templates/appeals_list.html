@@ -18,6 +18,7 @@
           <th>Blood group</th>
           <th>Date last donated</th>
           <th>Edit appeal</th>
+          <th>Delete appeal</th>
           
           
         </tr>
@@ -32,8 +33,9 @@
           <td>{{appeal.town}}</td>
           <td>{{appeal.age}}</td>
           <td>{{appeal.blood_group}}</td>
-          <td>{{appeal.date_last_donated}}</td>
+          <td>{{appeal.date_of_appeal}}</td>
           <td> <a href="{% url 'edit_appeals' id=appeal.id %}">Edit appeal</a></td>
+          <td><a href="{% url 'delete_appeals' id=appeal.id %}">Delete</a></td>
        
           
           
