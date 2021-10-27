@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="appeal">
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>County</th>
+          <th>Town</th>
+          <th>Age</th>
+          <th>Blood group</th>
+          <th>Date of appeal</th>
+          <th>Edit appeal</th>
+          <th>Delete appeal</th>
+        </tr>
+
+        {% for appeal in appeals %}
+        <tr>
+         
+
+          <td>{{appeal.first_name}}</td>
+          <td>{{appeal.last_name}}</td>
+          <td>{{appeal.county}}</td>
+          <td>{{appeal.town}}</td>
+          <td>{{appeal.age}}</td>
+          <td>{{appeal.blood_group}}</td>
+          <td>{{appeal.date_of_appeal}}</td>
+          <td> <a href="{% url 'edit_appeals' id=appeal.id %}">Edit appeal</a></td>
+          <td><a href="{% url 'delete_appeals' id=appeal.id %}">Delete</a></td>
+       
+          
+          
+          
+        </tr>
+    </table>
+          {% endfor %}
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Red Swift Management System<h1>
+        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap 4 sidebar collapse menu with the font-awesome icons</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <a href="#">Your Logo</a>
+        </div>
+
+        <ul class="list-unstyled">
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+                    <span class="icon"><i class="fas fa-home"></i></span>Dashboard</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+
+                    <span class="icon"><i class="fas fa-file"></i></span>Appeals</a>
+            </li>
+            <li>
+                <a href="#"><span class="icon"><i class="fas fa-camera"></i></span>Donors</a>
+            </li>
+            <li>
+                <a href="#"><span class="icon"><i class="fas fa-mobile-alt"></i></span>Log Out</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-green">
+                    <div class="inner">
+                        <h3> 6 </h3>
+                        <p> Pending Appeals </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                    <a href="#" class="card-box-footer">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-orange">
+                    <div class="inner">
+                        <h3> 2000 </h3>
+                        <p> Total Donors</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    </div>
+                    <a href="#" class="card-box-footer">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-red">
+                    <div class="inner">
+                        <h3> 7 </h3>
+                        <p> Announcements</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <a href="#" class="card-box-footer">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #sidebar {
+            z-index: 999;
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            left: 0px;
+            overflow-y: auto;
+            background: #270486;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            border-radius: 10px;
+        }
+
+        #sidebar .sidebar-header a {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 3px;
+            padding: 5px 0px;
+        }
+
+        #sidebar .sidebar-header {
+            background-color: #270486;
+            font-size: 20px;
+            line-height: 52px;
+            text-align: center;
+        }
+
+        #sidebar ul li a {
+            padding: 15px 10px;
+            font-size: 17px;
+            display: block;
+            color: #fff;
+            border-bottom: 1px solid #939fa5;
+            text-decoration: none;
+            transition: 0.4s;
+        }
+
+        #sidebar ul ul a {
+            font-size: 16px !important;
+            padding-left: 30px !important;
+            background: #263238;
+        }
+
+        a.dropdown-toggle.collapsed.dropdown-toggle::after {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: 5px;
+            vertical-align: 5px;
+            content: "";
+            border-bottom: 5px solid;
+            border-right: 5px solid transparent;
+            border-top: 0;
+            /* float: right;  */
+            margin-top: 10px;
+        }
+
+        #sidebar .dropdown-toggle::after {
+            float: right;
+            margin-top: 10px;
+        }
+
+        #sidebar .icon {
+            padding-right: 15px;
+        }
+        .card-box-footer{
+            color: white;
+        }
+
+        .card-box {
+            position: relative;
+            color: #fff;
+            padding: 20px 10px 40px;
+            margin: 150px 0px; 
+            padding: 40%;
+         }
+
+        .card-box:hover {
+            text-decoration: none;
+            color: #f1f1f1;
+        }
+
+        .card-box:hover .icon i {
+            font-size: 100px;
+            transition: 1s;
+            -webkit-transition: 1s;
+        }
+
+        .card-box .inner {
+            padding: 5px 10px 0 10px;
+        }
+
+        .card-box h3 {
+            font-size: 27px;
+            font-weight: bold;
+            margin: 0 0 8px 0;
+            white-space: nowrap;
+            padding: 0;
+            text-align: left;
+        }
+
+        .card-box p {
+            font-size: 15px;
+        }
+
+        .card-box .icon {
+            position: absolute;
+            top: auto;
+            bottom: 5px;
+            right: 5px;
+            z-index: 0;
+            font-size: 72px;
+            color: rgba(0, 0, 0, 0.15);
+        }
+
+        .card-box .card-box-footer {
+            position: absolute;
+            left: 0px;
+            bottom: -60px;
+            text-align: center;
+            padding:5 px 0;
+            background: rgba(0, 0, 0, 0.974);
+            width: 100%;
+            height: 20%;
+            text-decoration: none;
+        }
+        .bg-green {
+            background-color: #00a65a !important;
+            width: 110%;
+            height: 60%;
+            margin-bottom: 20px;
+          }
+        .bg-orange {
+            background-color: #f39c12 !important;
+            width: 110%;
+            height: 60%;
+            margin-bottom: 20px;
+       
+        }
+        .bg-red {
+            background-color: #d9534f !important;
+            width: 110%;
+            height: 60%;
+            margin-bottom: 20px;    
+        }
+        .col-lg-3 {
+            margin: 7px;
+        }
+        .row{
+            padding-right: -20%;
+          
+        }
+        .container{
+            background-color: #FFEBEA;
+            padding-bottom: 8%;
+            margin-left: 21.5%;
+            width: 75%;
+         
+           
+          
+          
+        
+        }
+    </style>
+
+
+</body>
+
+</html>
+</body>
+</html>
