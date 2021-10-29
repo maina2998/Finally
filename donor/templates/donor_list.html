@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <link rel="apple-touch-icon" sizes="76x76" href="https://appsrv1-147a1.kxcdn.com/material-dashboard-pro/img/apple-icon.png">
+        <link rel="icon" type="image/png" href="https://appsrv1-147a1.kxcdn.com/material-dashboard-pro/img/favicon.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>RedSwift Donor List</title>
+        <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+        <!--     Fonts and icons     -->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:400,700%7CMaterial+Icons" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="{% static 'list.css' %}">
+        <link href="https://appsrv1-147a1.kxcdn.com/material-dashboard-pro/css/material-dashboard.min.css?v=2.1.2" rel="stylesheet" />
+        <link href="https://appsrv1-147a1.kxcdn.com/material-dashboard-pro/demo/demo.css" rel="stylesheet" />
+        <!-- Specific Page CSS goes HERE  -->  
+      </head>
+<body>
+    <h1>donor List</h1>
+           <table style="width:84%">
+            <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>age</th>
+            <th>Phonenumber</th>
+            <th>Town</th>
+            <th>County</th>
+            <th>Image</th>
+            <th>Profile</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            </tr>
+
+            <tr>
+            {%for donor in donors%}
+            <tr>
+            <td>{{donor.first_name}}</td>
+            <td>{{donor.last_name}}</td>
+            <td>{{donor.age}}</td>
+            <td>{{donor.phone_number}}</td>
+            <td>{{donor.town}}</td>
+            <td>{{donor.county}}</td>
+
+            
+            {% if donor.image %}
+            <td><img src="{{donor.image.url}}" width="45"></td>
+            {% endif %}
+            <td><a href="{% url 'donor_profile' id=donor.id %}">Profile</a></td>
+            <td><a href="{% url 'edit_donor' id=donor.id %}"><i class="material-icons" >edit</i></a></td>
+            <td><a href="{% url 'delete_donor' id=donor.id %}"><i id="delete" class="material-icons" >close</i></a></td>
+  
+            </tr>
+            {% endfor %}
+        </body>
+</html>
+
+
+
+

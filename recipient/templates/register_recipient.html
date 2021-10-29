@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'form.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="div">
+        <div class="form">
+    
+            <h1 class="head">Recipient Registration Form</h1>
+            <img height="100px" src= {%  static 'images/logo.png' %}>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    {{form.as_p}}
+        <input type="submit" value="Submit" class="button">
+    </form>
+    </div>
+    </div>
+   
+        <footer>
+            <p>&copy;Redswift2021</p>
+        </footer>    
+
+</body>
+</html>

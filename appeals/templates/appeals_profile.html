@@ -1,15 +1,57 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <style>
+    
+    #button {
+    width: 150px;
+    height: 40px;
+    margin-right: 2%;
+    background-color: #1139AA;
+    color: white;
+    text-align: center;
+    }
+    a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    }
+    .content{
+    margin-left:50% ;
+    }
+    </style>
+
+    <div className="home-cards">
+         <div class = "card">
+            <div class="about-content"> 
+         <section class="skewbox">
+          <div class="content">
+
     <h3>{{appeal.first_name}}</h3>
     <h3>{{appeal.last_name}} </h3>
     <h3>{{appeal.county}}</h3>
     <h3>{{appeal.date_of_appeal}}</h3>
+
+    <button id="button"><a href="{% url 'appeals_list' %}">Back</a></button>
+
+
+</div>
+         
+</section>
+
+</div>
+</div>
+</div>
 </body>
 </html>
+

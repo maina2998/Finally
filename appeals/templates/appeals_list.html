@@ -1,10 +1,24 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <link rel="stylesheet" href="{% static 'list.css' %}">
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://appsrv1-147a1.kxcdn.com/material-dashboard-pro/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="https://appsrv1-147a1.kxcdn.com/material-dashboard-pro/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:400,700%7CMaterial+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    
+    <link href="https://appsrv1-147a1.kxcdn.com/material-dashboard-pro/css/material-dashboard.min.css?v=2.1.2" rel="stylesheet" />
+    <link href="https://appsrv1-147a1.kxcdn.com/material-dashboard-pro/demo/demo.css" rel="stylesheet" />
+    <!-- Specific Page CSS goes HERE  -->  
+  </head>
 </head>
 <body>
     <table class="appeal">
@@ -16,6 +30,7 @@
           <th>Age</th>
           <th>Blood group</th>
           <th>Date of appeal</th>
+          <th>View profile</th>
           <th>Edit appeal</th>
           <th>Delete appeal</th>
         </tr>
@@ -31,8 +46,10 @@
           <td>{{appeal.age}}</td>
           <td>{{appeal.blood_group}}</td>
           <td>{{appeal.date_of_appeal}}</td>
-          <td> <a href="{% url 'edit_appeals' id=appeal.id %}">Edit appeal</a></td>
-          <td><a href="{% url 'delete_appeals' id=appeal.id %}">Delete</a></td>
+          <td><a href="{%url 'appeals_profile' id=appeal.id %}">Profile</a></td>
+          <td><a href="{%url 'edit_appeals' id=appeal.id %}"><i class="material-icons" >edit</i></a></td>
+          <td><a href="{% url 'delete_appeals' id=appeal.id %}"><i id="delete" class="material-icons" >close</i></a></td>
+  
        
           
           

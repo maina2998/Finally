@@ -1,0 +1,196 @@
+.dropdown-menu a{
+background-color:black;
+}
+
+#sidebar {
+z-index: 999;
+position: fixed;
+width: 280px;
+height: 100%;
+left: 0px;
+overflow-y: auto;
+background: #1139AA;
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+border-radius: 10px;
+}
+
+#sidebar .sidebar-header a {
+color: #fff;
+display: block;
+text-decoration: none;
+font-weight: bold;
+letter-spacing: 3px;
+padding: 5px 0px;
+}
+
+#sidebar .sidebar-header {
+background-color: #1139AA;
+font-size: 20px;
+line-height: 52px;
+text-align: center;
+}
+
+#sidebar ul li a {
+padding: 15px 10px;
+font-size: 17px;
+display: block;
+color: #fff;
+border-bottom: 1px solid #939fa5;
+text-decoration: none;
+transition: 0.4s;
+}
+
+a.dropdown-toggle.collapsed.dropdown-toggle::after {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 5px;
+vertical-align: 5px;
+content: "";
+border-bottom: 5px solid;
+border-right: 5px solid transparent;
+border-top: 0;
+/* float: right;  */
+margin-top: 10px;
+}
+
+#sidebar .dropdown-toggle::after {
+float: right;
+margin-top: 10px;
+}
+
+#sidebar .icon {
+padding-right: 15px;
+}
+.card-box-footer{
+color: white;
+}
+
+.card-box {
+position: relative;
+color: #fff;
+padding: 20px 10px 40px;
+margin: 150px 0px; 
+padding: 40%;
+margin-left: 70%;
+}
+
+.card-box:hover {
+text-decoration: none;
+color: #f1f1f1;
+}
+
+.card-box:hover .icon i {
+font-size: 100px;
+transition: 1s;
+-webkit-transition: 1s;
+}
+
+.card-box .inner {
+padding: 5px 50px 10 10px;
+margin-bottom: 30%;
+color:black;
+}
+
+.card-box h3 {
+font-size: 27px;
+font-weight: bold;
+margin: 0 0 8px 0;
+white-space: nowrap;
+padding: 0;
+text-align: left;
+
+}
+
+.card-box p {
+font-size: 20px;
+margin-bottom: 90%;
+
+}
+
+.card-box .icon {
+position: absolute;
+top: auto;
+bottom: 5px;
+right: 10px;
+z-index: 0;
+font-size: 60px;
+color: #1139AA;
+
+}
+
+.card-box .card-box-footer {
+position: absolute;
+left: 0px;
+bottom: -60px;
+padding:15px;
+background:#ffff ;
+color:#ffff ;
+font-size: 24px;
+width: 100%;
+height: 15%;
+text-decoration: none;
+background-color: #1139AA;
+/* margin-left: 50%; */
+}
+.card-box .card-box-footer i{
+    color: #ffff;
+    margin-left: 20%
+
+}
+
+.bg-green {
+background-color:#ffff !important;
+width: 110%;
+height: 60%;
+margin-bottom: 20px;
+}
+.bg-orange {
+background-color: #ffff  !important;
+width: 110%;
+height: 60%;
+margin-bottom: 20px;
+
+}
+.bg-red {
+background-color:#ffff  !important;
+width: 110%;
+height: 60%;
+margin-bottom: 20px;    
+}
+.col-lg-3 {
+margin: 7px;
+}
+
+.container{
+background-color: #FFEBEA; 
+padding-bottom: 5%;
+
+}
+
+h1{
+margin-left: 40%;
+color: #1139AA;
+}    
+.dropdown{
+color: black;
+} 
+#announcements ,#donors{
+color: red;
+}
+#pending{
+color:#1139AA;
+}
+.container i{
+color:#1139AA;
+}
+
+.inner{
+color:black;
+font-size: 28px;
+margin-bottom: 50%;
+padding-bottom: 50%;
+}

@@ -1,0 +1,62 @@
+body{
+    background-color: #FFEBEA;
+}
+section{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 400px;
+    width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    background-color: white;
+   
+ }
+ 
+ .content{
+    line-height: 1.5em;
+    font-size: 18px;
+    text-align: justify;
+    margin-left: 8%;
+    margin-right: 8%;
+    
+ }
+ input{
+    display: inline-block;
+    background-color: red;
+    height: 30px;
+    width: 80px;
+ 
+ }
+ #danger{
+     margin-left:40%;
+ }
+ h1{
+    font-size:30px;
+    text-align:center;
+    color: black
+
+ }
+ p{
+     font-size: 18px;
+ }
+button{
+    height: 30px;
+    width: 80px;
+    text-decoration: none;
+  
+}
+#cancel a{
+    text-decoration: none;
+    color: black;
+}
+.action{
+    /* display: inline-block; */
+    /* justify-content: space-between; */
+    justify-content: space-around;
+ 
+
+}
+
+

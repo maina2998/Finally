@@ -25,9 +25,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',include('home.urls')),
     path('appeals/',include('appeals.urls')),
+    path("recipient/",include("recipient.urls")),
+    path("donor/",include("donor.urls")),
   
-
-
-  
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+if settings.DEBUG:
+    urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
