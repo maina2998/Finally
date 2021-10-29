@@ -53,7 +53,6 @@ content: "";
 border-bottom: 5px solid;
 border-right: 5px solid transparent;
 border-top: 0;
-/* float: right;  */
 margin-top: 10px;
 }
 
@@ -65,17 +64,15 @@ margin-top: 10px;
 #sidebar .icon {
 padding-right: 15px;
 }
-.card-box-footer{
-color: white;
-}
-
 .card-box {
 position: relative;
 color: #fff;
-padding: 20px 10px 40px;
 margin: 150px 0px; 
-padding: 40%;
-margin-left: 70%;
+padding: 50%;
+width: 10%;
+top: -90px;
+margin-left: 100%;
+box-shadow: 5px 5px 5px 5px #888888
 }
 
 .card-box:hover {
@@ -104,13 +101,6 @@ padding: 0;
 text-align: left;
 
 }
-
-.card-box p {
-font-size: 20px;
-margin-bottom: 90%;
-
-}
-
 .card-box .icon {
 position: absolute;
 top: auto;
@@ -129,12 +119,11 @@ bottom: -60px;
 padding:15px;
 background:#ffff ;
 color:#ffff ;
-font-size: 24px;
+font-size: 22px;
 width: 100%;
 height: 15%;
 text-decoration: none;
-background-color: #1139AA;
-/* margin-left: 50%; */
+background-color: #09090a;
 }
 .card-box .card-box-footer i{
     color: #ffff;
@@ -162,17 +151,11 @@ height: 60%;
 margin-bottom: 20px;    
 }
 .col-lg-3 {
-margin: 7px;
+margin: 4px;
+margin-left: 5;
 }
-
-.container{
-background-color: #FFEBEA; 
-padding-bottom: 5%;
-
-}
-
 h1{
-margin-left: 40%;
+margin-left: 30%;
 color: #1139AA;
 }    
 .dropdown{
@@ -190,7 +173,14 @@ color:#1139AA;
 
 .inner{
 color:black;
-font-size: 28px;
-margin-bottom: 50%;
-padding-bottom: 50%;
+font-size: 25px;
+margin-bottom: 40%;
+padding-bottom: 45%;
+}
+p{
+    font-size: 20px;
+    margin: 7%;
+    margin-left: 20%;
+    padding-top: 40px;
+
 }
