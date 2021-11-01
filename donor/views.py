@@ -16,6 +16,7 @@ def register_donor(request):
 def donor_list(request):
     donors=Donor.objects.all()
     return render(request,"donor_list.html",{"donors":donors})
+
 def edit_donor(request,id):
     donors=Donor.objects.get(id=id)
     if request.method=="POST":
@@ -25,9 +26,11 @@ def edit_donor(request,id):
     else:
         form=donorRegistrationForm(instance=donors)
     return render(request,"edit_donor.html",{"form":form})
+
 def donor_profile(request,id):
     donors=Donor.objects.get(id=id)
     return render(request,"donor_profile.html",{"donor":donors})
+
 def delete_donor(request,id):
     donor=Donor.objects.get(id=id)
     if request.method == 'POST':
