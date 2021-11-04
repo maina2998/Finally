@@ -3,40 +3,19 @@
 <html lang="en">
 
     <head>
-        <!-- <link rel="stylesheet" href="{% static 'list.css' %}">  -->
+         <link rel="stylesheet" href="{% static 'list.css' %}"> 
          <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:400,700%7CMaterial+Icons" /> 
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"> 
          <!-- <link rel="stylesheet" href="{% static 'homepage.css' %}"> -->
-      </head>
+    </head>
 <body>
-<style>
 
-#list {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #list td, #list th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #list tr:nth-child(even){background-color: #f2f2f2;}
-  
-  th{
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color:#FFEBEA;;
-    color: black;
 
-  }
-  h1{
-      text-align: center;
-  }
-    </style>
     <h1>Donor List</h1>
+
+  <div class="topnav">
+    <input type="text" placeholder="Search...">
+  </div> 
 
             <table id="list">
             <tr>
@@ -75,9 +54,8 @@
             <td>{{donor.blood_group}}</td>
             <td>{{donor.town}}</td>
             <td><a href="{% url 'donor_profile' id=donor.id %}">Profile</a></td>
-            <td><a href="{% url 'edit_donor' id=donor.id %}"><i class="material-icons" >edit</i></a></td>
+            <td><a href="{% url 'edit_donor' id=donor.id %}"><i id="edit" class="material-icons" >edit</i></a></td>
             <td><a href="{% url 'delete_donor' id=donor.id %}"><i id="delete" class="material-icons" >close</i></a></td>
-  
             </tr>
             {% endfor %}
         </body>

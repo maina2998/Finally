@@ -3,40 +3,19 @@
 <html lang="en">
 
     <head>
-        <!-- <link rel="stylesheet" href="{% static 'list.css' %}">  -->
+        <link rel="stylesheet" href="{% static 'list.css' %}">  
          <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:400,700%7CMaterial+Icons" /> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"> 
       </head>
 <body>
-    <style>
-#list {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #list td, #list th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #list tr:nth-child(even){background-color: #f2f2f2;}
-  
-  th{
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color:#FFEBEA;;
-    color: black;
 
-  }
-  h1{
-      text-align: center;
-  }
-    </style>
-  
+    <h1> Pending Appeals</h1>
+
+    <div class="topnav">
+        <input type="text" placeholder="Search...">
+      </div> 
     <table class="table">
-        <h1> Pending Appeals</h1>
+    
         <thead>
             <tr>
                 <table id="list">
@@ -45,14 +24,22 @@
                 <th>Recipient Firstname</th>
                 <th>Recipient Last Name</th>
                 <th>Recipient Age</th>
-                <th>Blood Group</th>
+                <th>Blood Group
+                    <select name="Blood Groups" id="blood-groups">
+                    <option value="AB-">AB-</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="A-">A-</option>
+                    <option value="O-">O-</option>
+                    <option value="B+">B+</option>
+                    <option value="A+">A+</option>
+                    <option value="O+">O+</option>
+                </select></th>
                 <th>Pints</th>
                 <th>Location</th>  
                 <th>Get Donor</th>  
                 <th>Edit Donor</th> 
-                <th>Delete Donor</th> 
-
-               
+                <th>Delete Donor</th>  
             </tr>
         </thead>
         <tbody>
@@ -60,7 +47,7 @@
 
     {% for recipient in recipients %}
     <tr>
-        <!-- <td class="text-center">1</td> -->
+        
         <td>{{recipient.contact_person}}</td>
         <td>{{recipient.contactperson_phonenumber}}</td>
         <td>{{recipient.first_name}}</td>
@@ -70,13 +57,10 @@
         <td>{{recipient.blood_pints}}</td>
         <td>{{recipient.location}}</td>
 
-        <!-- <td><button type="button" rel="tooltip" class="btn btn-info"></td> 
-            <i class="material-icons">person</i>
-        </button> -->
+       
+        <td><a href="{%url 'edit_recipient' id=recipient.id%}"><i id="person" class="material-icons" >person</i></a></td>
 
-        <td><a href="{%url 'edit_recipient' id=recipient.id%}"><i class="material-icons" >person</i></a></td>
-
-        <td><a href="{%url 'edit_recipient' id=recipient.id%}"><i class="material-icons" >edit</i></a></td>
+        <td><a href="{%url 'edit_recipient' id=recipient.id%}"><i id="edit" class="material-icons" >edit</i></a></td>
 
         <td><a href="{%url 'delete_recipient' id=recipient.id%}"><i id="delete" class="material-icons" >close</i></a></td>
     </tr>    
