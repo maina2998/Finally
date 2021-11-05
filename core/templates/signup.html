@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -18,21 +18,20 @@
               {%csrf_token%}
               <section class="h-100 bg-dark">
                   <center>
-                      <h3 id="header">Login</h3>
+                      <h3 id="header">Signup</h3>
                   </center>
                   <label for="username">Username</label><br>
                   <input type="text" placeholder="Username" name="username" required><br><br>
+                  <label for="username">Email</label><br>
+                  <input type="text" placeholder="Email" name="email" required><br><br>
                   <label for="password">Password</label><br>
                   <input type="password" placeholder="Password" name="password" required><br><br>
-                  <a href="homepage.html"><button id="btn_login" type="submit">Login</button></a>
-                  <a href="/password_reset" class="facebook"><i class="fa fa-facebook-f"></i><span>fogort password?</span></a>
-                  <p>{{form.errors}}</p>
-                  <a href="/signup" class="facebook"><i class="fa fa-facebook-f"></i><span>Don't have account?Signup</span></a>
-                  <p>{{form.errors}}</p>
+                  <a href="homepage.html"><button id="btn_login" type="submit">Signup</button></a>
+                  <a href="signup/" class="facebook"><i class="fa fa-facebook-f"></i><span>Don't have account?Signup</span></a>
+
               </section>
           </form>
       </div>
-      <section>
   </div>
   </div>
 </body>
