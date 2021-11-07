@@ -1,0 +1,48 @@
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>homepage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'nav.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+
+  <body>
+    <div class="d-flex align-items-center" style="position: sticky">
+      <img src={% static 'images/logo.png' %} style="height:80px; width:
+      fit-content; "> RedSwift
+      <form id="search" class="w-100 me-3" style="margin-left: 20%">
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Search..."
+          aria-label="Search"/>
+      </form>
+    </div>
+    </body>
+    </html>
+  
+-->
+{% extends "navbar.html" %}
+{% block content%}
+
+    <center>
+        {%if searched %}
+            <h1>You searched For {{searched}}</h1>
+        {%else%}
+            <h1>You forgot to search for a donor</h1>
+        {%endif%}
+    </center>
+{%endblock%}    

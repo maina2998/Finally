@@ -1,19 +1,18 @@
+{% extends "navbar.html" %}
 {% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
         <link rel="stylesheet" href="{% static 'list.css' %}">  
-         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:400,700%7CMaterial+Icons" /> 
+        <link rel="stylesheet" href="{% static 'nav.css' %}">  
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:400,700%7CMaterial+Icons" /> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"> 
+       
       </head>
 <body>
-
-    <h1> Pending Appeals</h1>
-
-    <div class="topnav">
-        <input type="text" placeholder="Search...">
-      </div> 
+    <h3> Appeals</h3>
     <table class="table">
     
         <thead>
@@ -62,7 +61,7 @@
 
         <td><a href="{%url 'edit_recipient' id=recipient.id%}"><i id="edit" class="material-icons" >edit</i></a></td>
 
-        <td><a href="{%url 'delete_recipient' id=recipient.id%}"><i id="delete" class="material-icons" >close</i></a></td>
+        <td><a href="{%url 'delete_recipient' id=recipient.id%}"><i id="delete" class="material-icons">delete</i></a></td>
     </tr>    
     {%endfor%}
            
@@ -71,6 +70,8 @@
     <footer>
         <p>&copy;Redswift2021</p>
     </footer>
-
+    
+{% endblock  %}
 </body>
 </html>
+

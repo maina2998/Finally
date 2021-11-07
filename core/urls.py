@@ -4,6 +4,6 @@ from core import views
 
 urlpatterns=[
     path('', login_user, name="login"),
-    path('/signup',views.signup, name='signup'),
+    path('signup',views.signup, name='signup'),
     path("password_reset", views.password_reset_request, name="password_reset"),
 ]

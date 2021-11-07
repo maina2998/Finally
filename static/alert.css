@@ -1,16 +1,18 @@
 body{
     background-color: #FFEBEA;
+    
 }
 section{
     position:absolute;
-    top: 50%;
+    top: 50%; 
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 400px;
-    width: 500px;
+    /* height: 400px;  */
+    /* width: 500px;  */
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     display: flex;
     background-color: white;
+    margin-top: 5%;
    
  }
  
@@ -18,15 +20,15 @@ section{
     line-height: 1.5em;
     font-size: 18px;
     text-align: justify;
-    margin-left: 8%;
-    margin-right: 8%;
+    /* margin-left: 8%; */
+    /* margin-right: 8%; */
     
  }
  input{
     display: inline-block;
     background-color: red;
-    height: 30px;
-    width: 80px;
+    /* height: 30px; */
+    /* width: 80px; */
  
  }
  #danger{
@@ -46,17 +48,20 @@ button{
     width: 80px;
     text-decoration: none;
   
-}
+} 
 #cancel a{
     text-decoration: none;
     color: black;
+    font-size: 18px;
 }
 .action{
-    /* display: inline-block; */
-    /* justify-content: space-between; */
+    display: inline-block; 
+    justify-content: space-between;
     justify-content: space-around;
- 
 
 }
 
-
+.skewbox{
+    margin-bottom: 5%;
+} 
+ 

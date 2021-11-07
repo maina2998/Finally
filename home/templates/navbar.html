@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>homepage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'nav.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+
+  <body>
+    <div class="d-flex align-items-center" style="position: sticky">
+      <img src={% static 'images/logo.png' %} style="height:80px; width:
+      fit-content; "> RedSwift
+
+      <form class="d-flex" method=POST action="{%url 'search_donors'%}">
+      
+        {%csrf_token%}
+
+        <input
+          type="search"class="form-control me-2"placeholder="Search..."aria-label="Search" name="searched">
+          <button class="btn btn-outline-secondary" type="submit"> Search</button>
+      </form>
+
+      <div class="flex-shrink-0 dropdown">
+        <a
+          href="#"
+          class="d-block link-dark text-decoration-none dropdown-toggle"
+          id="dropdownUser2"
+          data-bs-toggle="dropdown"
+          aria-expanded="false" >
+          <img
+            src="https://github.com/mdo.png"
+            alt="mdo"
+            width="52"
+            height="52"
+            class="rounded-circle"/>
+        </a>
+        <ul
+          class="dropdown-menu text-small shadow"
+          aria-labelledby="dropdownUser2">
+          <li><a class="dropdown-item" href="#">New project...</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <nav id="sidebar">
+      <div class="sidebar-header"></div>
+
+      <ul class="list-unstyled">
+        <li>
+          <a href="#homeSubmenu">
+            <span class="icon"><i class="fas fa-home"></i></span>Dashboard</a>
+        </li>
+
+        <li>
+          <a
+            href="#pageSubmenu"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            class="dropdown-toggle collapsed">
+            <span class="icon"><i class="fas fa-file"></i></span> Appeals</a>
+
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{%url 'register_recipient'%}"
+              >Add Appeals</a>
+            <a class="dropdown-item" href="{%url 'recipient_list'%}"
+              >Total Appeals</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+
+        <li>
+          <a
+            href="#pageSubmenu"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            class="dropdown-toggle collapsed" >
+            <span class="icon"><i class="fa fa-users"></i></span> Donors</a>
+
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{%url 'register_donor'%}"
+              >Add Donors</a>
+            <a class="dropdown-item" href="{%url 'donor_list'%}">Total Donors</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li>
+          <a href="#"
+            ><span class="icon"><i class="fas fa-power-off"></i></span>LogOut</a>
+        </li>
+      </ul>
+    </nav>
+{% block content %}
+
+{% endblock %}
+
+  </body>
+
+</html>
+
+
+

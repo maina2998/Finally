@@ -1,5 +1,7 @@
 from django.db import models
 from django.db.models.fields import CharField, PositiveSmallIntegerField
+import django_filters
+
 
 # Create your models here.
 class Donor(models.Model):
@@ -13,4 +15,10 @@ class Donor(models.Model):
     image=models.ImageField(upload_to="images/",null=True)
     phonenumber=models.CharField(max_length=30,null=True,blank=True)
 
-  
+
+class DonorFilter(django_filters.FilterSet):  
+    # name=django_filters.CharFilter(lookup_expr='iexact')
+
+    class Meta:
+        model=Donor
+        fields=['blood_group','county','date_last_donated']

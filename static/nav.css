@@ -1,0 +1,104 @@
+.dropdown-menu{
+    background-color: black;
+       
+    }
+    .dropdown-item{
+        color: #000;
+    }
+    #sidebar {
+        /* z-index: 999; */
+        position: fixed;
+        width: 280px;
+        height: 150%;
+        left: 0px;
+        /* overflow-y: auto; */
+        background: #270486;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        border-radius: 10px;
+       
+    }
+    .img{
+        padding-top: 3%;
+    }
+    .Icon{
+        padding-left: 90%;
+        font-weight: bolder;
+        font-size: 20px;
+        transition: 1s;
+        -webkit-transition: 1s;
+        color: #270486;
+         margin-top: -5px;
+    
+    }
+    h5{
+        padding-left: 5%;
+        padding-bottom: 0px;
+    }
+    
+    #sidebar .sidebar-header a {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 4px;
+        padding: 12px 8px;
+    }
+    
+    #sidebar .sidebar-header {
+        background-color: #270486;
+        font-size: 20px;
+        line-height: 60px;
+        text-align: center;
+    }
+    
+    #sidebar ul li a {
+        padding: 29px 25px;
+        font-size: 21px;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.4s;
+        display:inline-block; 
+        text-align: center;
+    }
+    
+    #sidebar ul ul a {
+        font-size: 16px !important;
+        padding-left: 30px !important;
+        background: #263238;
+    }
+    
+    a.dropdown-toggle.collapsed.dropdown-toggle::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 5px;
+        vertical-align: 5px;
+        content: "";
+        border-bottom: 5px solid;
+        border-right: 5px solid transparent;
+        border-top: 0;
+        /* float: right;  */
+        margin-top: 10px;
+    }
+    
+    #sidebar .dropdown-toggle::after {
+        float: right;
+        margin-top: 10px;
+    }
+    
+    #sidebar .icon {
+        padding-right: 15px;
+    }
+    #search{
+        margin-right:5% ;
+        padding-right: 10%;
+    }
+    
+    button{
+       margin-bottom: 10%; 
+       margin-right: 50%;
+    }

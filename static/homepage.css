@@ -1,5 +1,6 @@
+
 .dropdown-menu{
-    background-color: black;
+background-color: black;
    
 }
 .dropdown-item{
@@ -240,4 +241,8 @@ p{
     font-display: 10px;
     font-weight: 25px;
     color:#270486 ;
+}
+#search{
+    margin-right:5% ;
+    padding-right: 10%;
 }

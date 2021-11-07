@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap 4 sidebar collapse menu with the font-awesome icons</title>
+    <title>homepage</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'homepage.css' %}">
@@ -20,14 +20,14 @@
 <body>
     <div class="d-flex align-items-center" style="position: sticky;">
         <img src={% static 'images/logo.png' %} style="height:80px; width: fit-content; "> RedSwift
-        <form class="w-100 me-3" style="padding-left: 30%;">
+        <form id="search" class="w-100 me-3" style="margin-left: 30%;">
             <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
 
         </form>
         <div class="flex-shrink-0 dropdown">
             <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                <img src="https://github.com/mdo.png" alt="mdo" width="52" height="52" class="rounded-circle">
             </a>
             <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                 <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -129,8 +129,8 @@
         </div>
     </div>
 <style>
-    .dropdown-menu{
-    background-color: black;
+.dropdown-menu{
+background-color: black;
    
 }
 .dropdown-item{
@@ -371,6 +371,10 @@ p{
     font-display: 10px;
     font-weight: 25px;
     color:#270486 ;
+}
+#search{
+    margin-right:5% ;
+    padding-right: 10%;
 }
 </style>
 </body>

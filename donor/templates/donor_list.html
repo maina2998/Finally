@@ -1,23 +1,21 @@
+{% extends "navbar.html" %}
 {% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
-         <link rel="stylesheet" href="{% static 'list.css' %}"> 
-         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:400,700%7CMaterial+Icons" /> 
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"> 
-         <!-- <link rel="stylesheet" href="{% static 'homepage.css' %}"> -->
-    </head>
+        <link rel="stylesheet" href="{% static 'list.css' %}">  
+        <link rel="stylesheet" href="{% static 'nav.css' %}">  
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:400,700%7CMaterial+Icons" /> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"> 
+       
+      </head>
 <body>
 
-
-    <h1>Donor List</h1>
-
-  <div class="topnav">
-    <input type="text" placeholder="Search...">
-  </div> 
-
-            <table id="list">
+    <h3>Donor List</h3>
+            <table id="list">  
+                <thead>
             <tr>
             <th>Image</th>
             <th>Firstname</th>
@@ -40,27 +38,38 @@
             <th>Edit</th>
             <th>Delete</th>
             </tr>
+        </thead>
+        <tbody>
 
-            <tr>
-            {%for donor in donors%}
-            <tr>
-            {% if donor.image %}
+    {%for donor in donors%}
+    <tr>
+    {% if donor.image %}
             <td><img src="{{donor.image.url}}" width="45"></td>
-            {% endif %}
-            <td>{{donor.first_name}}</td>
-            <td>{{donor.last_name}}</td>
-            <td>{{donor.age}}</td>
-            <td>{{donor.phone_number}}</td>
-            <td>{{donor.blood_group}}</td>
-            <td>{{donor.town}}</td>
-            <td><a href="{% url 'donor_profile' id=donor.id %}">Profile</a></td>
-            <td><a href="{% url 'edit_donor' id=donor.id %}"><i id="edit" class="material-icons" >edit</i></a></td>
-            <td><a href="{% url 'delete_donor' id=donor.id %}"><i id="delete" class="material-icons" >close</i></a></td>
-            </tr>
-            {% endfor %}
-        </body>
+          {% endif %}
+          <td>{{donor.first_name}}</td>
+          <td>{{donor.last_name}}</td>
+          <td>{{donor.age}}</td>
+          <td>{{donor.phone_number}}</td>
+          <td>{{donor.blood_group}}</td>
+          <td>{{donor.town}}</td>
+          <td><a href="{% url 'donor_profile' id=donor.id %}">Profile</a></td>
+          <td><a href="{% url 'edit_donor' id=donor.id %}"><i id="edit" class="material-icons" >edit</i></a></td>
+          <td><a href="{% url 'delete_donor' id=donor.id %}"><i id="delete" class="material-icons" >close</i></a></td>
+          </tr>
+{% endfor %}
+
+        </tbody>
+    </table>
+    <footer>
+        <p>&copy;Redswift2021</p>
+    </footer>
+{% endblock %}  
+</body>
 </html>
 
 
 
+
+          
+    
 

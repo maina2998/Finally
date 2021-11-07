@@ -1,7 +1,10 @@
 #list {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 70%;
+    height: 50%;
+    margin-left: 24.5%;
+  
   }
   
   #list td, #list th {
@@ -19,8 +22,9 @@
     color: black;
 
   }
-  h1{
-      text-align: center;
+  h3{
+      margin-left: 55%;
+
   }
   #delete{
     color: red;
@@ -31,17 +35,20 @@
   .topnav input[type=text] {
   float: right;  
   padding: 6px;
-  /* margin-top: 8px; */
-  /* margin-right: 10px;  */
-  font-size: 17px;
- /* align-items: center; */
- 
-}
+  margin-top: 8px;
+  margin-right: 10px; 
+  font-size: 17px; 
+} 
 footer{
-    text-align: center;
+  margin-left: 55%;
 }
 #person{
 color: black;
 }
+#search{
+  margin-right:5% ;
+  padding-right: 10%;
+}
+
 
    
