@@ -21,10 +21,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 
+from home import views
+
 urlpatterns = [
     path('',include('core.urls')),
     path('signup/',include('core.urls')),
     path('admin/', admin.site.urls),
+    path("user", views.userpage, name = "userpage")  ,  
+
     path('home/',include('home.urls')),
     path("recipient/",include("recipient.urls")),
     path("donor/",include("donor.urls")),

@@ -1,122 +1,336 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
 
+<head>
     <title>homepage</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{% static 'nav.css' %}" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"/>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'homepage.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="homepage.css" />
-  </head>
+    <link rel="stylesheet" href="homepage.css">
 
-  <body>
-    <div class="d-flex align-items-center" style="position: sticky">
-      <img src={% static 'images/logo.png' %} style="height:80px; width:
-      fit-content; "> RedSwift
 
-      <form class="d-flex" method=POST action="{%url 'search_donors'%}">
+</head>
+
+<body>
+ 
+    <div class="d-flex align-items-center" style="position: sticky;">
+    
+        <img src={% static 'images/logo.png' %} style="height:80px; width: fit-content; float: left;padding-left: 0%; "> RedSwift
       
-        {%csrf_token%}
+        <form id="search" class="w-100 me-3" style="margin-left: 30%;">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
 
-        <input
-          type="search"class="form-control me-2"placeholder="Search..."aria-label="Search" name="searched">
-          <button class="btn btn-outline-secondary" type="submit"> Search</button>
-      </form>
+        </form>
+        <div class="flex-shrink-0 dropdown">
+                <img src="https://github.com/mdo.png" alt="mdo" width="52" height="52" class="rounded-circle">
+                <a class="btn btn-outline-primary" href="/user">{{user.username|title}}</a>
 
-      <div class="flex-shrink-0 dropdown">
-        <a
-          href="#"
-          class="d-block link-dark text-decoration-none dropdown-toggle"
-          id="dropdownUser2"
-          data-bs-toggle="dropdown"
-          aria-expanded="false" >
-          <img
-            src="https://github.com/mdo.png"
-            alt="mdo"
-            width="52"
-            height="52"
-            class="rounded-circle"/>
-        </a>
-        <ul
-          class="dropdown-menu text-small shadow"
-          aria-labelledby="dropdownUser2">
-          <li><a class="dropdown-item" href="#">New project...</a></li>
-          <li><a class="dropdown-item" href="#">Settings</a></li>
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li>
-            <hr class="dropdown-divider" />
-          </li>
-          <li><a class="dropdown-item" href="#">Sign out</a></li>
-        </ul>
-      </div>
+            </a>
+           
+            
+        </div>
+      
     </div>
 
     <nav id="sidebar">
-      <div class="sidebar-header"></div>
 
-      <ul class="list-unstyled">
-        <li>
-          <a href="#homeSubmenu">
-            <span class="icon"><i class="fas fa-home"></i></span>Dashboard</a>
-        </li>
+        <div class="sidebar-header">
+          
+        </div>
 
-        <li>
-          <a
-            href="#pageSubmenu"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            class="dropdown-toggle collapsed">
-            <span class="icon"><i class="fas fa-file"></i></span> Appeals</a>
+        <ul class="list-unstyled">
+            <li>
+                <a href="#homeSubmenu">
+                    <span class="icon"><i class="fas fa-home"></i></span>Dashboard</a>
+            </li>
 
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="{%url 'register_recipient'%}"
-              >Add Appeals</a>
-            <a class="dropdown-item" href="{%url 'recipient_list'%}"
-              >Total Appeals</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    class="dropdown-toggle collapsed">
+                    <span class="icon"><i class="fas fa-file"></i></span> Appeals</a>
 
-        <li>
-          <a
-            href="#pageSubmenu"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            class="dropdown-toggle collapsed" >
-            <span class="icon"><i class="fa fa-users"></i></span> Donors</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{%url 'register_recipient'%}">Add Appeals</a>
+                    <a class="dropdown-item" href="{%url 'recipient_list'%}">Total Appeals</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
 
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="{%url 'register_donor'%}"
-              >Add Donors</a>
-            <a class="dropdown-item" href="{%url 'donor_list'%}">Total Donors</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li>
-          <a href="#"
-            ><span class="icon"><i class="fas fa-power-off"></i></span>LogOut</a>
-        </li>
-      </ul>
+
+            </li>
+
+
+            <li>
+                <a href="#pageSubmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    class="dropdown-toggle collapsed">
+                    <span class="icon"><i class="fa fa-users"></i></span> Donors</a>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{%url 'register_donor'%}">Add Donors</a>
+                    <a class="dropdown-item" href="{%url 'donor_list'%}">Total Donors</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+
+            </li>
+            <li>
+                <a href="{%url 'login'%}"><span class="icon"><i class="fas fa-power-off"></i></span>Log Out</a>
+            </li>
+        </ul>
     </nav>
-{% block content %}
 
-{% endblock %}
+<style>
+.dropdown-menu{
+background-color: black;
+   
+}
+.dropdown-item{
+    color: #000;
+}
+#sidebar {
+    /* z-index: 999; */
+    position: fixed;
+    width: 280px;
+    height: 150%;
+    /* overflow-y: auto; */
+    background: #270486;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+   
+}
+.img{
+    padding-top: 3%;
+}
+.Icon{
+    padding-left: 90%;
+    font-weight: bolder;
+    font-size: 20px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    color: #270486;
+     margin-top: -5px;
 
-  </body>
+}
+h5{
+    padding-left: 5%;
+    padding-bottom: 0px;
+}
+
+#sidebar .sidebar-header a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 4px;
+    padding: 12px 8px;
+}
+
+#sidebar .sidebar-header {
+    background-color: #270486;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+}
+
+#sidebar ul li a {
+    padding: 29px 25px;
+    font-size: 21px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s;
+    display:inline-block; 
+    text-align: center;
+}
+
+#sidebar ul ul a {
+    font-size: 16px !important;
+    padding-left: 30px !important;
+    background: #263238;
+}
+
+a.dropdown-toggle.collapsed.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    vertical-align: 5px;
+    content: "";
+    border-bottom: 5px solid;
+    border-right: 5px solid transparent;
+    border-top: 0;
+    /* float: right;  */
+    margin-top: 10px;
+}
+
+#sidebar .dropdown-toggle::after {
+    float: right;
+    margin-top: 10px;
+}
+
+#sidebar .icon {
+    padding-right: 15px;
+}
+.card-box-footer{
+    color: white;
+}
+
+.card-box {
+    position: relative;
+    margin-top: 8%;
+    color: #fff;
+    padding: 20px 10px 40px;
+    margin: 110px 0px; 
+    padding: 15%;
+    margin: 10px;
+    margin-left: 28%;
+    margin-top: 40%;
+    box-shadow: 0px 0px 1px 1px  #270486 ;
+
+
+ }
+
+.card-box:hover {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.card-box:hover .icon i {
+    font-size: 90px;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+.card-box .inner {
+    padding: 5px 10px 0 10px;
+}
+
+.card-box h3 {
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+    padding: 0;
+    text-align: left;
+}
+
+.card-box p {
+    font-size: 15px;
+}
+
+.card-box .icon {
+    position: absolute;
+    top: auto;
+    bottom: 5px;
+    right: 5px;
+    z-index: 0;
+    font-size: 72px;
+   
+}
+
+.card-box .card-box-footer {
+    position: absolute;
+    left: 0px;
+    bottom: -70px;
+    padding:16px;
+    background:#ffff ;
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    height: 25%;
+    text-decoration: none;
+    box-shadow: 0px 0px 1px 1px  #270486 ;
+}
+.bg-green {
+    background-color:rgba(255, 255, 255, 0) !important;
+    width: 120%;
+    height: 70%;
+    margin-bottom: 25px;
+  }
+.bg-orange {
+    background-color: #ffff  !important;
+    width: 120%;
+    height: 70%;
+    margin-bottom: 25px;
+
+}
+.bg-red {
+    background-color:#ffff  !important;
+    width: 120%;
+    height: 70%;
+    margin-bottom: 25px;    
+}
+.col-lg-3 {
+    margin: 12px;
+    width: 100%;
+}
+.row{
+    padding-right: -22%;
+  
+}
+
+.container{
+    background-color: #ffebea00;
+    top: 10%;
+    margin-left: 23%;
+    width: 74%;
+    padding-bottom: 9%;
+}
+    
+h1{
+    margin-left: 40%;
+}    
+.dropdown{
+   color: black;
+} 
+i card-box bg-orange {
+    color: red;
+}
+i card-box bg-red{
+    color: yellow;
+}
+card-box bg-orange h3{
+    color: red;
+}
+#announcements ,#donors{
+    color: red;
+}
+#pending{
+    color: red;
+}
+.container i{
+    color:#270486 ;
+}
+.container{ 
+    font-size: 28px;
+    margin-top: 2%;
+    
+}
+.inner{
+    color:black;
+    font-size: 28px;
+    margin-bottom: 50%;
+}
+p{
+    padding-left: 30%;
+    font-size: 20px;
+    float: right;
+    font-display: 10px;
+    font-weight: 25px;
+    color:#270486 ;
+}
+#search{
+    margin-right:5% ;
+    padding-right: 10%;
+}
+</style>
+</body>
 
 </html>
-
-
-
