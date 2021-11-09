@@ -1,4 +1,10 @@
+{% include 'navbar.html' %}
+
 {% load static %}
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,19 +15,74 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="row">
-    <div class="column">
-    <div class="card">
-        <img src="{{donor.image.url}}" width="45">
-            <div class="container2">
-            <h2>{{donor.first_name}}</h2>
-            <h2>{{donor.last_name}}</h2>
-            <h2>{{donor.phone_number}}</h2>
-            <h2>{{donor.age}}</h2>
-            <h2>{{donor.town}}</h2>
-            <h2>{{donor.county}}</h2>
+   
+
+    <h1 style="background-color: darkblue; color: white;  text-align: center; padding-bottom: 2px;">Donor Details</h1>
+
+         <div class="card" style="background-color: rgba(255, 248, 220, 0);">
+            <div class="container" style="text-align: center;">
+                <h2>{{donor.first_name}} {{donor.last_name}} </h2>
+
+                <img src="{{donor.image.url}}" width="150" height="150" >
+
+
+
+            <h3>{{donor.phone_number}}</h3>
+            <h3>{{donor.age}}yrs</h3>
+            <h3>{{donor.town}}</h3>
+            <h3>{{donor.county}}</h3>
+            <h2 >Last Donated:{{donor.date_last_donated}}</h2>
+            <input type="submit" value="Thank" class="button" >
+            <input type="submit" value="Request" class="button">
+
              </div>
-          </div>
-         </div>
+
+            </div>
+         
+
+          <style>
+              body{
+              
+                  width: 90%;
+                 
+              }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 85%;
+  margin-left: 20%;
+  padding-left: 2%;
+  border-radius: 50px; /* 5px rounded corners */
+}
+h2{
+    color: black;
+}
+h3{
+    color:darkblue;
+}
+input{
+    background-color: darkblue;
+    color: white;
+    padding: 5%;
+    border-radius: 20%;
+}
+
+/* Add some padding inside the card container */
+.container {
+    font-size: larger;
+    color: rgb(255, 255, 255);
+  float:right;
+  padding-top: 10px;
+  padding-left: 20%;
+  padding-bottom: 50px;
+  border-radius: 30px;
+  width: 50%;
+}
+
+    img {
+        
+  border-radius: 300px 300px ;
+}
+          </style>
 </body>
 </html>
