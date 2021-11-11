@@ -28,7 +28,6 @@ urlpatterns = [
     path('signup/',include('core.urls')),
     path('admin/', admin.site.urls),
     path("user", views.userpage, name = "userpage")  ,  
-
     path('home/',include('home.urls')),
     path("recipient/",include("recipient.urls")),
     path("donor/",include("donor.urls")),
