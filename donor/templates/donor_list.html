@@ -75,7 +75,6 @@
                             <option value="O+">O+</option>
                         </select></th>
                         <th>Town</th>
-                        <th>Profile</th>
                         <th>Edit</th>
                         <th>Delete</th>
                         </tr>
@@ -94,7 +93,6 @@
           <td>{{donor.phone_number}}</td>
           <td>{{donor.blood_group}}</td>
           <td>{{donor.town}}</td>
-          <td><a href="{% url 'donor_profile' id=donor.id %}">Profile</a></td>
           <td><a href="{% url 'edit_donor' id=donor.id %}"><i id="edit" class="material-icons" >edit</i></a></td>
           <td><a href="{% url 'delete_donor' id=donor.id %}"><i id="delete" class="material-icons" >close</i></a></td>
           </tr>
