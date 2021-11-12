@@ -1,7 +1,7 @@
 from django import urls
 from django.urls import path
 from .views import register_donor,donor_list,edit_donor,donor_profile,delete_donor, donor_profile
-from django_filters.views import object_filter
+
 
 
 urlpatterns = [
