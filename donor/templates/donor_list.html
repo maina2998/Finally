@@ -58,7 +58,7 @@
                     width="100%">
                     <thead class="thead-darkcyan" style="background-color: rgb(0, 2, 139); color: white;">
                   <tr>
-                        <th>Image</th>
+                       
                         <th>Firstname</th>
                         <th>Lastname</th>
                         <th>age</th>
@@ -75,6 +75,7 @@
                             <option value="O+">O+</option>
                         </select></th>
                         <th>Town</th>
+                        <th>Profile</th>
                         <th>Edit</th>
                         <th>Delete</th>
                         </tr>
@@ -84,15 +85,14 @@
                         <!--get_table_body is for ajax search-->
                         <tr>
      {%for donor in donors%}
-    {% if donor.image %}
-            <td><img src="{{donor.image.url}}" width="45"></td>
-          {% endif %}
+  
           <td>{{donor.first_name}}</td>
           <td>{{donor.last_name}}</td>
           <td>{{donor.age}}</td>
           <td>{{donor.phone_number}}</td>
           <td>{{donor.blood_group}}</td>
           <td>{{donor.town}}</td>
+          <td><a href="{% url 'donor_profile' id=donor.id %}">Profile</a></td>
           <td><a href="{% url 'edit_donor' id=donor.id %}"><i id="edit" class="material-icons" >edit</i></a></td>
           <td><a href="{% url 'delete_donor' id=donor.id %}"><i id="delete" class="material-icons" >close</i></a></td>
           </tr>
