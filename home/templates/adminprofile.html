@@ -1,80 +1,68 @@
-{%include 'navbar.html'%}
-{%load static%}
-
+{% include 'navbar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'alert.css' %}">
+    <title>Document</title>
+</head>
 <body >
-    
-
-<br><br>
-	<div class="container" style="justify-content: center;">
-	 
-	    	<div >
-		    	<div class="card p-5">
-                    <p class="card-title font-weight-bold text-center">Hello, {{ user.username|title }}</p>
-			      
-			    	<div class="card-text">
-                       <br>
-			    	<p>	Username:{{ user.username }}</p><br>
-                    
-                    <p>	Name:{{ user.first_name }} {{ user.last_name }}</p><br>
-                    
-
-                    <p style="text-align: center; justify-content: center;">Email:{{ user.email }} </p>
-				  		
-			        </div>
-		    	</div>
-		  	</div>
-		   
-		
-	</div>
-    <style>
-        body{
-        
-            width: 90%;
-           
-        }
-        p{
-            padding-right:40% ;
-        }
+    <h1 style="background-color: darkblue; color: white;  text-align: center; padding-bottom: 2px;">My Profile</h1>
+         <div class="card" style="background-color: rgba(255, 248, 220, 0);">
+            <div class="container" style="text-align: center;">
+                <img src="https://thumbs.dreamstime.com/b/icon-profile-circle-not-shadow-color-dark-blue-icon-profile-circle-not-shadow-color-dark-blue-background-194699290.jpg" width="150" height="150" >
+                <h2 class="card-title font-weight-bold text-center">Hello, {{ user.username|title }}</h2>
+                <div class="card-text">
+                   <br>
+                <h3>    Username:{{ user.username }} </h3><br>
+                <h3>    Name:{{ user.first_name }} {{ user.last_name }}</h3><br>
+                <h6 style="text-align: center; justify-content: center; color:darkblue ;">Email:{{ user.email }} </h6>
+                <a href="home/logout"><button  id="btn_login" type="submit" style="background-color: darkblue; color: white; float: initial;">Logout</button></a>
+             </div>
+            </div>
+          <style>
+              body{
+                  width: 90%;
+              }
 .card {
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-transition: 0.3s;
-width: 80%;
-
-margin-left: 3%;
-justify-content: center;
-padding-right:50px ;
-background-color:#FFEBEA ;
-
-border-radius: 50px; /* 5px rounded corners */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 85%;
+  margin-left: 20%;
+  padding-left: 2%;
+  border-radius: 50px; /* 5px rounded corners */
 }
 h2{
-color: black;
+    color: black;
 }
 h3{
-color:darkblue;
+    color:darkblue;
 }
 input{
-background-color: darkblue;
-color: white;
-padding: 5%;
-border-radius: 20%;
+    background-color: darkblue;
+    color: white;
+    padding: 5%;
+    border-radius: 20%;
 }
-
 /* Add some padding inside the card container */
 .container {
-font-size: larger;
-color: rgb(255, 255, 255);
-
-padding-top: 5%;
-
-padding-bottom: 50px;
-border-radius: 30px;
-width: 100%;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+  float:right;
+  padding-top: 10px;
+  padding-left: 20%;
+  padding-bottom: 50px;
+  border-radius: 30px;
+  width: 50%;
 }
-
-img {
-  
-border-radius: 300px 300px ;
+    img {
+  border-radius: 300px 300px ;
 }
-    </style>
+          </style>
 </body>
+</html>
+(27 kB)
+

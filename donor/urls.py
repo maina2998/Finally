@@ -1,6 +1,6 @@
 from django import urls
 from django.urls import path
-from .views import register_donor,donor_list,edit_donor,donor_profile,delete_donor, donor_profile,search_donor
+from .views import register_donor,donor_list,edit_donor,donor_profile,delete_donor, donor_profile
 from django_filters.views import object_filter
 
 
@@ -10,6 +10,6 @@ urlpatterns = [
     path("edit/<int:id>", edit_donor,name="edit_donor"),
     path("profile/<int:id>", donor_profile,name="donor_profile"),
     path("delete/<int:id>", delete_donor,name="delete_donor"),
-    path("search_donor/",search_donor, name='search_donors'),
+    # path("search_donor/",search_donor, name='search_donors'),
 
 ]

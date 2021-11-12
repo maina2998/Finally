@@ -48,10 +48,3 @@ def delete_recipient(request,id):
 
 
 
-def searchResult(request):
-    recipients = None
-    query = None
-    if 'r' in request.GET:
-        query = request.GET.get('r')
-        recipients = Recipient.objects.all().filter(Q(name__contains=query) | Q(description__contains=query))
-    return render(request,'recipient_list.html', {'query':query, 'recipients':recipients})

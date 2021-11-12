@@ -3,6 +3,7 @@ from .models import Donor
 from django.shortcuts import redirect, render
 from .forms import donorRegistrationForm
 from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 
 @csrf_exempt
 def register_donor(request):
@@ -41,13 +42,5 @@ def delete_donor(request,id):
     return render (request,'delete_donor.html')
 
 
-def search_donor(request):
-    if request.method=="POST":
-        searched = request.POST.get ('searched',False)
-
-        return render(request, 'donor_list.html', {'searched':searched})
-
-    else:
-        return render(request, 'donor_list.html', {})
 
 

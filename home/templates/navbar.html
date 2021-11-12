@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>homepage</title>
     <meta charset="utf-8">
@@ -13,80 +12,55 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="homepage.css">
-
-
 </head>
-
 <body>
- 
     <div class="d-flex align-items-center" style="position: sticky;">
-    
         <img src={% static 'images/logo.png' %} style="height:80px; width: fit-content; float: left;padding-left: 0%; "> RedSwift
-      
         <form id="search" class="w-100 me-3" style="margin-left: 30%;">
             <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-
         </form>
         <div class="flex-shrink-0 dropdown">
-                <img src="https://github.com/mdo.png" alt="mdo" width="52" height="52" class="rounded-circle">
+                <img src="https://thumbs.dreamstime.com/b/icon-profile-circle-not-shadow-color-dark-blue-icon-profile-circle-not-shadow-color-dark-blue-background-194699290.jpg" alt="mdo" width="52" height="52" class="rounded-circle">
                 <a class="btn btn-outline-primary" href="/user">{{user.username|title}}</a>
-
             </a>
-           
-            
         </div>
-      
     </div>
-
     <nav id="sidebar">
-
         <div class="sidebar-header">
-          
         </div>
-
         <ul class="list-unstyled">
             <li>
-                <a href="#homeSubmenu">
+                <a href="home/home/">
                     <span class="icon"><i class="fas fa-home"></i></span>Dashboard</a>
             </li>
-
             <li>
                 <a href="#pageSubmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                     class="dropdown-toggle collapsed">
                     <span class="icon"><i class="fas fa-file"></i></span> Appeals</a>
-
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="{%url 'register_recipient'%}">Add Appeals</a>
                     <a class="dropdown-item" href="{%url 'recipient_list'%}">Total Appeals</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-
-
             </li>
-
-
             <li>
                 <a href="#pageSubmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                     class="dropdown-toggle collapsed">
                     <span class="icon"><i class="fa fa-users"></i></span> Donors</a>
-
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="{%url 'register_donor'%}">Add Donors</a>
                     <a class="dropdown-item" href="{%url 'donor_list'%}">Total Donors</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-
             </li>
             <li>
                 <a href="{%url 'login'%}"><span class="icon"><i class="fas fa-power-off"></i></span>Log Out</a>
             </li>
         </ul>
     </nav>
-
 <style>
 .dropdown-menu{
 background-color: black;
-   
 }
 .dropdown-item{
     color: #000;
@@ -103,7 +77,6 @@ background-color: black;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     border-radius: 10px;
-   
 }
 .img{
     padding-top: 3%;
@@ -116,13 +89,11 @@ background-color: black;
     -webkit-transition: 1s;
     color: #270486;
      margin-top: -5px;
-
 }
 h5{
     padding-left: 5%;
     padding-bottom: 0px;
 }
-
 #sidebar .sidebar-header a {
     color: #fff;
     display: block;
@@ -131,14 +102,12 @@ h5{
     letter-spacing: 4px;
     padding: 12px 8px;
 }
-
 #sidebar .sidebar-header {
     background-color: #270486;
     font-size: 20px;
     line-height: 60px;
     text-align: center;
 }
-
 #sidebar ul li a {
     padding: 29px 25px;
     font-size: 21px;
@@ -146,16 +115,14 @@ h5{
     color: #fff;
     text-decoration: none;
     transition: 0.4s;
-    display:inline-block; 
+    display:inline-block;
     text-align: center;
 }
-
 #sidebar ul ul a {
     font-size: 16px !important;
     padding-left: 30px !important;
     background: #263238;
 }
-
 a.dropdown-toggle.collapsed.dropdown-toggle::after {
     display: inline-block;
     width: 0;
@@ -169,49 +136,40 @@ a.dropdown-toggle.collapsed.dropdown-toggle::after {
     /* float: right;  */
     margin-top: 10px;
 }
-
 #sidebar .dropdown-toggle::after {
     float: right;
     margin-top: 10px;
 }
-
 #sidebar .icon {
     padding-right: 15px;
 }
 .card-box-footer{
     color: white;
 }
-
 .card-box {
     position: relative;
     margin-top: 8%;
     color: #fff;
     padding: 20px 10px 40px;
-    margin: 110px 0px; 
+    margin: 110px 0px;
     padding: 15%;
     margin: 10px;
     margin-left: 28%;
     margin-top: 40%;
     box-shadow: 0px 0px 1px 1px  #270486 ;
-
-
  }
-
 .card-box:hover {
     text-decoration: none;
-    color: #f1f1f1;
+    color: #F1F1F1;
 }
-
 .card-box:hover .icon i {
     font-size: 90px;
     transition: 1s;
     -webkit-transition: 1s;
 }
-
 .card-box .inner {
     padding: 5px 10px 0 10px;
 }
-
 .card-box h3 {
     font-size: 27px;
     font-weight: bold;
@@ -220,11 +178,9 @@ a.dropdown-toggle.collapsed.dropdown-toggle::after {
     padding: 0;
     text-align: left;
 }
-
 .card-box p {
     font-size: 15px;
 }
-
 .card-box .icon {
     position: absolute;
     top: auto;
@@ -232,9 +188,7 @@ a.dropdown-toggle.collapsed.dropdown-toggle::after {
     right: 5px;
     z-index: 0;
     font-size: 72px;
-   
 }
-
 .card-box .card-box-footer {
     position: absolute;
     left: 0px;
@@ -259,7 +213,6 @@ a.dropdown-toggle.collapsed.dropdown-toggle::after {
     width: 120%;
     height: 70%;
     margin-bottom: 25px;
-
 }
 .bg-red {
     background-color:#ffff  !important;
@@ -273,9 +226,7 @@ a.dropdown-toggle.collapsed.dropdown-toggle::after {
 }
 .row{
     padding-right: -22%;
-  
 }
-
 .container{
     background-color: #ffebea00;
     top: 10%;
@@ -283,13 +234,12 @@ a.dropdown-toggle.collapsed.dropdown-toggle::after {
     width: 74%;
     padding-bottom: 9%;
 }
-    
 h1{
     margin-left: 40%;
 }    
 .dropdown{
    color: black;
-} 
+}
 i card-box bg-orange {
     color: red;
 }
@@ -308,10 +258,9 @@ card-box bg-orange h3{
 .container i{
     color:#270486 ;
 }
-.container{ 
+.container{
     font-size: 28px;
     margin-top: 2%;
-    
 }
 .inner{
     color:black;
@@ -332,5 +281,4 @@ p{
 }
 </style>
 </body>
-
 </html>

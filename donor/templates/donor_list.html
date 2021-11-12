@@ -1,48 +1,48 @@
-{% include "navbar.html" %}
 {% load static %}
+{% include "tables.html" %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <link rel="stylesheet" href="{% static 'list.css' %}">
-        <link rel="stylesheet" href="{% static 'nav.css' %}">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:400,700%7CMaterial+Icons" /> 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"> 
-      </head>
-<body>
-
-
-    <h3>Donors List</h3>
-            <table id="list">
-                <thead>
-            <tr>
-            <th>Image</th>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>age</th>
-            <th>Phonenumber</th>
-            <th>Blood Group
-                <select name="Blood Groups" id="blood-groups">
-                <option value="AB-">AB-</option>
-                <option value="B-">B-</option>
-                <option value="AB+">AB+</option>
-                <option value="A-">A-</option>
-                <option value="O-">O-</option>
-                <option value="B+">B+</option>
-                <option value="A+">A+</option>
-                <option value="O+">O+</option>
-            </select></th>
-            <th>Town</th>
-            <th>Profile</th>
-            <th>Edit</th>
-            <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-
-    {%for donor in donors%}
-    <tr>
+<div class="container">
+<div class="card-icon">
+    <i class="material-icons">assignment</i>
+  </div>
+  <h4 class="card-title">Donors List</h4>
+</div>
+    <div class="row">
+        <div class="col">
+            <div class="col-md-12" style="padding-left: 24%;padding-right: 5%;">
+                <!-- id="product-table" is for ajax crud-->
+                <table id="datatables"
+                    class="table table-sm table-responsive-sm table-hover table-striped text-nowrap table-bordered"
+                    width="100%">
+                    <thead class="thead-darkcyan" style="background-color: rgb(0, 2, 139); color: white;">
+                  <tr>
+                        <th>Image</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>age</th>
+                        <th>Phonenumber</th>
+                        <th>Blood Group
+                            <select name="Blood Groups" id="blood-groups">
+                            <option value="AB-">AB-</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="A-">A-</option>
+                            <option value="O-">O-</option>
+                            <option value="B+">B+</option>
+                            <option value="A+">A+</option>
+                            <option value="O+">O+</option>
+                        </select></th>
+                        <th>Town</th>
+                        <th>Profile</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                        </tr>
+                    </thead>
+                    </tr>
+                    <tbody id="get_table_body">
+                        <!--get_table_body is for ajax search-->
+                        <tr>
+     {%for donor in donors%}
     {% if donor.image %}
             <td><img src="{{donor.image.url}}" width="45"></td>
           {% endif %}
@@ -56,16 +56,20 @@
           <td><a href="{% url 'edit_donor' id=donor.id %}"><i id="edit" class="material-icons" >edit</i></a></td>
           <td><a href="{% url 'delete_donor' id=donor.id %}"><i id="delete" class="material-icons" >close</i></a></td>
           </tr>
-{% endfor %}
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="7" class=" text-center alert alert-danger">No Donors found</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</div>
 
-        </tbody>
-    </table>
-    <footer>
-        <p>&copy;Redswift2021</p>
-    </footer>
-{% endblock %}
-</body>
-</html>
 
 
 

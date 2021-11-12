@@ -1,9 +1,9 @@
 from django.db import models
 from django.db.models.fields import CharField, PositiveSmallIntegerField
+from recipient.models import Recipient
 import django_filters
 
 
-# Create your models here.
 class Donor(models.Model):
     first_name=models.CharField(max_length=12)
     last_name=models.CharField(max_length=10)
@@ -14,6 +14,11 @@ class Donor(models.Model):
     county=models.CharField(max_length=12,default=30,null=True)
     image=models.ImageField(upload_to="images/",null=True)
     phonenumber=models.CharField(max_length=30,null=True,blank=True)
+
+
+
+
+    
 
 
 class DonorFilter(django_filters.FilterSet):  

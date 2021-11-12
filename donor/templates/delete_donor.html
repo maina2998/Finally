@@ -1,4 +1,4 @@
-{% extends "navbar.html" %} 
+{% include "navbar.html" %} 
 {% load static %}
 {% block content %} 
 
@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'alert.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'alert.css' %}"> -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -22,14 +22,13 @@
 
   <form method ="post" action="">
       {% csrf_token %}
-      <i id="danger" class="fa fa-times-circle" style="font-size:88px;color:red"></i>
-      <h1>Are you sure<h1><br>
-
+      <i id="danger" class="fa fa-times-circle" style="font-size:70px;color:red"></i>
+      <h1>Are you sure<h1>
       <p>Do you really want to delete these records? This process cannot be undone</p>
 
       <div class="action">
 
-      <button id="cancel"><a href="{% url 'donor_list' %}">Cancel</a></button>
+      <button id="cancel"><a href="{% url 'donor_list' %}" style="color: white;">Cancel</a></button>
          <input class="btn btn-danger" type="submit" value="Delete" />
         </div>
       
@@ -43,5 +42,83 @@
 </div>
 </div>
 {% endblock  %} 
+
+<style>
+   body{
+    background-color: #FFEBEA;
+    
+}
+section{
+    position:absolute;
+    top: 40%; 
+    left: 60%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    background-color: white;
+    margin-top: 5%;
+   
+ }
+ 
+ .content{
+    line-height: 1.0em;
+    font-size: 18px;
+    padding-left: 10px;
+     margin-left: 8px; 
+  
+    
+ }
+ input{
+    display: inline-block;
+    background-color: red;
+    height: 39.5px;
+    width: 80px;
+    margin-bottom: 5%;
+    text-align: center;
+
+ 
+ }
+ #danger{
+     margin-left:10%;
+   
+ }
+ h1{
+    font-size:30px;
+   padding-left: 10px;
+    color: black
+
+ }
+ p{
+
+ }
+
+button{
+    height: 40px;
+    margin-bottom: 5px;
+    width: 80px;
+    border-radius: 5px;
+    padding-bottom: 14%;
+    background-color: rgb(5, 5, 104);
+    color: white;
+  
+    /* text-decoration: none; */
+  
+} 
+#cancel a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.action{
+    display: inline-block; 
+    justify-content: space-between;
+    justify-content: space-around;
+
+}
+
+.skewbox{
+    margin-bottom: 5%;
+} 
+</style>
 </body>
 </html>
