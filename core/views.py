@@ -72,14 +72,10 @@ def password_reset_request(request):
 
 def signup_user(request):
     if request.method == 'POST':
-        # form = UserCreationForm(request.POST)
-        # if form.is_valid():
-        #     form.save()
             username = request.POST.get('username')
             email = request.POST.get('email')
             password = request.POST.get('password')
-            user = authenticate(username=username,
-                                email=email, password=password)
+            user = authenticate(request, username=username,email=email, password=password)
             login(request, user)
             return redirect('home:homepage.html')
     else:

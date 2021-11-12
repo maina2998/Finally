@@ -12,7 +12,7 @@ class Donor(models.Model):
     date_last_donated=models.DateField(max_length=12,default=30,null=True)
     town=models.CharField(max_length=10,default=30,null=True)
     county=models.CharField(max_length=12,default=30,null=True)
-    image=models.ImageField(upload_to="images/",null=True)
+    # image=models.ImageField(upload_to="images/",null=True)
     phonenumber=models.CharField(max_length=30,null=True,blank=True)
 
 

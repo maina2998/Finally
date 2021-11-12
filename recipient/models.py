@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.fields import CharField, PositiveSmallIntegerField
 
+
 class Recipient(models.Model):
     first_name=models.CharField(max_length=20,default=None)
     last_name=models.CharField(max_length=20,default=None)

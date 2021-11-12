@@ -7,6 +7,6 @@ class User(models.Model):
     first_name=models.CharField(max_length=20,null=True,blank=True)
     last_name=models.CharField(max_length=20,null=True,blank=True)
     email=models.EmailField(max_length=50,null=True,blank=True)
-    image=models.ImageField(default="redswift/static/images/logo2.jpg1" , upload_to="images/",null=True)
+    # image=models.ImageField(default="redswift/static/images/logo2.jpg1" , upload_to="images/",null=True)
     superusers = User.objects.filter(is_superuser=True)
 
